@@ -18,4 +18,3 @@ def create_backup(source: str, destination: str):
         return {"success": True, "message": result.stdout}
     except subprocess.CalledProcessError as e:
         raise HTTPException(status_code=500, detail=f"Backup failed: {e.stderr}")
-    
